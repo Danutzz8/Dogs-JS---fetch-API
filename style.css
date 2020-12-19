@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+}
+
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgba(172, 171, 171, 0.774);
+}
+
+.header {
+    text-align: center;
+    padding: 1em 0 2em 0;
+}
+
+.header h1 {
+    margin: .7em auto ;
+    font-weight: 800;
+    text-shadow: 3px 3px 2px #fff;
+}
+
+.header select {
+    font-size: 1rem;
+    background-color: rgba(135, 180, 182, 0.74);
+    padding: .3em;
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slideshow {
+    flex: 1;
+    background-color: #777;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.logo {
+    width: 3em;
+    height: 3em;
+    margin: 1em;
+    margin-right: -4em;
+}
+
+.slide {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    opacity: 0;                           /*only the second line will be visible */
+    transform: scale(1);
+    transition: all .9s ease-out;
+
+}
+
+.slide:nth-last-child(2) {
+    opacity: 1;      /*only this one is visible from all lines  */
+    transform: scale(1.08);
+}
+
+
+
